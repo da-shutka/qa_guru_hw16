@@ -1,0 +1,17 @@
+{
+  "base": {
+    "logo": "",
+    "project": "HW-16",
+    "environment": "reqres.in",
+    "comment": "",
+    "reportLink": "",
+    "language": "en",
+    "allureFolder": "allure-report",
+    "enableChart": true
+  },
+  "telegram": {
+    "token": "",
+    "chat": "",
+    "replyTo": ""
+  }
+}
