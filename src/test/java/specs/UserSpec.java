@@ -13,25 +13,20 @@ public class UserSpec {
     public static RequestSpecification userRequestSpec = with()
             .filter(withCustomTemplates())
             .contentType(JSON)
-            .log().method()
-            .log().uri()
-            .log().body();
+            .log().all();
 
     public static ResponseSpecification userResponse201Spec = new ResponseSpecBuilder()
-            .log(LogDetail.STATUS)
-            .log(LogDetail.BODY)
             .expectStatusCode(201)
+            .log(LogDetail.ALL)
             .build();
 
     public static ResponseSpecification userResponse200Spec = new ResponseSpecBuilder()
-            .log(LogDetail.STATUS)
-            .log(LogDetail.BODY)
             .expectStatusCode(200)
+            .log(LogDetail.ALL)
             .build();
 
     public static ResponseSpecification userResponse204Spec = new ResponseSpecBuilder()
-            .log(LogDetail.STATUS)
-            .log(LogDetail.BODY)
             .expectStatusCode(204)
+            .log(LogDetail.ALL)
             .build();
 }

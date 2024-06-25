@@ -107,7 +107,8 @@ public class ReqResApiTests extends TestBase {
         UsersListResponseModel response = step("Запрос на получение списка пользователей", () ->
                 given(userRequestSpec)
                         .when()
-                        .get("/users?page=2")
+                        .queryParam("page", "2")
+                        .get("/users")
 
                         .then()
                         .spec(userResponse200Spec)
